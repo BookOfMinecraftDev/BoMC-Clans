@@ -1,0 +1,7 @@
+name: Clans
+main: com.BoMC.Clans.ClansPlugin
+version: 0.1.0
+
+author: Pocketkid2
+description: Clans plugin for the Book of Minecraft server!
+api-version: 1.17

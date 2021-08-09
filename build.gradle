@@ -1,0 +1,48 @@
+// build.gradle to be used for all BoMC projects
+
+plugins {
+
+	id 'eclipse'
+    id 'java-library'
+    id 'maven-publish'
+    
+}
+
+publishing {
+
+    publications {
+    
+        maven(MavenPublication) {
+        
+        	// Make sure to update this for each plugin/release
+        
+            groupId = 'com.BoMC'
+            artifactId = 'Clans'
+            version = '1.0'
+
+            from components.java
+            
+        }
+        
+    }
+    
+}
+
+repositories {
+
+	maven { url 'https://hub.spigotmc.org/nexus/content/repositories/public/' }
+	maven { url 'https://jitpack.io' }
+	
+	mavenCentral()
+    
+}
+
+dependencies {
+	
+	// Spigot
+	implementation 'org.spigotmc:spigot-api:1.17-R0.1-SNAPSHOT'
+	
+	//JUnit
+    testImplementation 'junit:junit:4.12'
+    
+}
